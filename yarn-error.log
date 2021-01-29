@@ -1,0 +1,108 @@
+Arguments: 
+  /Users/kingabesh/.nvm/versions/node/v14.8.0/bin/node /Users/kingabesh/.yarn/bin/yarn.js
+
+PATH: 
+  /Users/kingabesh/.composer/vendor/bin:/usr/local/opt/openjdk/bin:/Users/kingabesh/.nvm/versions/node/v14.8.0/bin:/Users/kingabesh/.yarn/bin:/Users/kingabesh/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/kingabesh/.composer/vendor/bin:/usr/local/opt/openjdk/bin:/Users/kingabesh/.nvm/versions/node/v14.8.0/bin:/Users/kingabesh/.yarn/bin:/Users/kingabesh/.config/yarn/global/node_modules/.bin:/Users/kingabesh/flutter/bin:/Users/kingabesh/flutter/.pub-cache/bin:/Users/kingabesh/Library/Android/sdk/platform-tools/:/Users/kingabesh/flutter/bin:/Users/kingabesh/flutter/.pub-cache/bin:/Users/kingabesh/Library/Android/sdk/platform-tools/
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.8.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: write EADDRNOTAVAIL
+      at WriteWrap.onWriteComplete [as oncomplete] (internal/stream_base_commons.js:94:16)
+      at handleWriteReq (internal/stream_base_commons.js:60:21)
+      at writeGeneric (internal/stream_base_commons.js:145:15)
+      at TLSSocket.Socket._writeGeneric (net.js:785:11)
+      at TLSSocket.Socket._write (net.js:797:8)
+      at doWrite (_stream_writable.js:377:12)
+      at clearBuffer (_stream_writable.js:517:7)
+      at TLSSocket.Writable.uncork (_stream_writable.js:317:7)
+      at ClientRequest._flushOutput (_http_outgoing.js:893:10)
+      at ClientRequest._flush (_http_outgoing.js:862:22)
+
+npm manifest: 
+  {
+    "name": "rule-validation-api",
+    "version": "1.0.0",
+    "description": "A rule validation API",
+    "main": "index.js",
+    "scripts": {
+      "build": "rimraf ./build && tsc",
+      "build:watch": "tsc -w",
+      "start": "node build/app.js",
+      "start:dev": "nodemon build/app.js",
+      "start:staging": "cross-env NODE_ENV=staging node build/app.js",
+      "test": "jest build/__tests__/**/*.js --detectOpenHandles --forceExit"
+    },
+    "keywords": [
+      "Rule",
+      "Validation",
+      "NodeJS",
+      "Express"
+    ],
+    "author": "Abasifreke Ekwere <abeshekwere@gmail.com>",
+    "license": "ISC",
+    "_moduleAliases": {
+      "@config": "build/config",
+      "@helpers": "build/helpers",
+      "@modules": "build/modules",
+      "@middlewares": "build/middlewares"
+    },
+    "jest": {
+    "moduleNameMapper": {
+      "^@config$": "<rootDir>/build/config",
+      "^@helpers(.*)$": "<rootDir>/build/helpers$1",
+      "^@modules(.*)$": "<rootDir>/build/modules$1",
+      "^@middlewares(.*)$": "<rootDir>/build/middlewares$1"
+  },
+    "coveragePathIgnorePatterns": [
+        "/node_modules/"
+      ]
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.10",
+      "@babel/preset-env": "^7.12.11",
+      "@babel/preset-typescript": "^7.12.7",
+      "@types/body-parser": "^1.19.0",
+      "@types/compression": "^1.7.0",
+      "@types/cors": "^2.8.6",
+      "@types/express": "^4.17.6",
+      "@types/helmet": "^0.0.47",
+      "@types/jest": "^26.0.19",
+      "@types/morgan": "^1.9.1",
+      "@types/node": "^14.0.13",
+      "@types/winston": "^2.4.4",
+      "babel-jest": "^26.6.3",
+      "babel-preset-env": "^1.7.0",
+      "babel-register": "^6.26.0",
+      "jest": "^26.6.3",
+      "nodemon": "^2.0.4",
+      "typescript": "^3.9.5"
+    },
+    "dependencies": {
+      "body-parser": "^1.19.0",
+      "compression": "^1.7.4",
+      "cors": "^2.8.5",
+      "cross-env": "^7.0.2",
+      "date-fns": "^2.15.0",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "helmet": "^3.23.1",
+      "module-alias": "^2.2.2",
+      "morgan": "^1.10.0",
+      "rimraf": "^3.0.2",
+      "winston": "^3.3.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

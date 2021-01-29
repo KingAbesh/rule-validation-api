@@ -1,0 +1,76 @@
+{
+  "name": "rule-validation-api",
+  "version": "1.0.0",
+  "description": "A rule validation API",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "build:watch": "tsc -w",
+    "start": "node build/server.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon build/server.js",
+    "start:staging": "cross-env NODE_ENV=staging node build/server.js",
+    "test": "jest build/__tests__/**/**/*.js --detectOpenHandles --forceExit"
+  },
+  "keywords": [
+    "Rule",
+    "Validation",
+    "NodeJS",
+    "Express"
+  ],
+  "author": "Abasifreke Ekwere <abeshekwere@gmail.com>",
+  "license": "ISC",
+  "_moduleAliases": {
+    "@config": "build/config",
+    "@constants": "build/constants",
+    "@helpers": "build/helpers",
+    "@modules": "build/modules",
+    "@middlewares": "build/middlewares"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@config$": "<rootDir>/build/config",
+      "^@constants(.*)$": "<rootDir>/build/constants$1",
+      "^@helpers(.*)$": "<rootDir>/build/helpers$1",
+      "^@modules(.*)$": "<rootDir>/build/modules$1",
+      "^@middlewares(.*)$": "<rootDir>/build/middlewares$1"
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.7",
+    "@types/body-parser": "^1.19.0",
+    "@types/compression": "^1.7.0",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.6",
+    "@types/helmet": "^0.0.47",
+    "@types/jest": "^26.0.19",
+    "@types/morgan": "^1.9.1",
+    "@types/node": "^14.0.13",
+    "@types/winston": "^2.4.4",
+    "babel-jest": "^26.6.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.4",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "date-fns": "^2.15.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.23.1",
+    "module-alias": "^2.2.2",
+    "morgan": "^1.10.0",
+    "rimraf": "^3.0.2",
+    "supertest": "^6.1.3",
+    "winston": "^3.3.3"
+  }
+}

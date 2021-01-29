@@ -1,0 +1,8 @@
+{
+    "rule": {
+        "field": "5",
+        "condition": "contains",
+        "condition_value": "rocinante"
+    },
+    "data": ["The Nauvoo", "The Razorback", "The Roci", "Tycho"]
+}

@@ -83,7 +83,6 @@ describe("POST /rule-validate", () => {
     done();
   });
 
-	
   it("it should return 400 if validation rule does not return true", async (done) => {
     const response = await request
       .post("/api/v1/validate-rule")
@@ -104,8 +103,8 @@ describe("POST /rule-validate", () => {
     });
     done();
   });
-	
-	it("it should return 200 if validation rule is passed", async (done) => {
+
+  it("it should return 200 if validation rule is passed", async (done) => {
     const response = await request
       .post("/api/v1/validate-rule")
       .send(passesValidationJson)

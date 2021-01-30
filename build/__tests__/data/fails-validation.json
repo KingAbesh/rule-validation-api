@@ -1,8 +1,0 @@
-{
-    "rule": {
-        "field": "0",
-        "condition": "eq",
-        "condition_value": "a"
-    },
-    "data": "damien-marley"
-}

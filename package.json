@@ -10,8 +10,7 @@
     "start:dev": "cross-env NODE_ENV=development nodemon build/server.js",
     "start:staging": "cross-env NODE_ENV=staging node build/server.js",
     "test": "jest build/__tests__/**/**/*.js --detectOpenHandles --forceExit",
-    "tsc": "tsc",
-    "postinstall": "npm run tsc"
+    "tsc": "tsc"
   },
   "keywords": [
     "Rule",

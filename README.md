@@ -12,7 +12,7 @@ Oh, there are rules. Just a few to mention :'(.
 
 - The JSON payload sent must have the structure specified below;
 
-  ```
+  ```javascript
   {
   "rule": {
     "field": "missions.count",
@@ -34,7 +34,7 @@ Oh, there are rules. Just a few to mention :'(.
 
 - You get this as a response.
 
-```
+```javascript
 {
   "message": "field missions.count successfully validated."
   "status": "success",
@@ -55,21 +55,22 @@ Oh, there are rules. Just a few to mention :'(.
 
 ### AVAILABLE ENDPOINTS
 
-```
+```markdown
 GET / - Get my profile
 
- - returns: JSON
+- returns: JSON
 ```
 
-```
+```markdown
 POST /validate-rule
 
- - validates a JSON consisting of data and certain rules to validate against.
+- validates a JSON consisting of data and certain rules to validate against.
 
- - required:
-     - JSON Payload as specified above.
+- required:
 
- - returns: JSON
+  - JSON Payload as specified above.
+
+- returns: JSON
 ```
 
 ### INSTALLATION AND LOCAL SETUP

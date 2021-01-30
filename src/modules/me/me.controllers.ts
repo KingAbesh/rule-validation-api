@@ -6,5 +6,5 @@ import * as MeService from "./me.services";
 export const getProfile = (_: Request, res: Response) => {
   const profile = MeService.getProfile();
 
-  createResponse("Welcome to my rule validation API", profile)(res, HTTP.OK);
+  createResponse("Welcome to my rule validation API.", profile)(res, HTTP.OK);
 };

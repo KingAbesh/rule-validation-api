@@ -2,6 +2,8 @@
 
 - ##### DEMO - https://validation-rules-api.herokuapp.com/api/v1
 
+- ##### API DOCS - https://documenter.getpostman.com/view/9041223/TW6zF6iN
+
 Could you imagine a more interesting way to handle validation ? Well, be my guest.
 
 You give me the rules and your desired data and I make sure your data conforms to the rules you specify.

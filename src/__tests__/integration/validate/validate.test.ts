@@ -2,13 +2,13 @@ import app from "../../../app"; // Link to your server file
 const supertest = require("supertest");
 const request = supertest(app);
 
-import invalidJson from "../../data/invalid.json";
-import noRuleJson from "../../data/no-rule-field.json";
-import noFieldRequiredWithinRuleJson from "../../data/no-required-field-within-rule-object.json";
-import fieldIsOfWrongTypeJson from "../../data/wrong-type.json";
-import fieldNotInDataJson from "../../data/field-not-in-data.json";
-import failsValidationJson from "../../data/fails-validation.json";
-import passesValidationJson from "../../data/passes-validation.json";
+import invalidJson from "../../mocks/invalid.json";
+import noRuleJson from "../../mocks/no-rule-field.json";
+import noFieldRequiredWithinRuleJson from "../../mocks/no-required-field-within-rule-object.json";
+import fieldIsOfWrongTypeJson from "../../mocks/wrong-type.json";
+import fieldNotInDataJson from "../../mocks/field-not-in-data.json";
+import failsValidationJson from "../../mocks/fails-validation.json";
+import passesValidationJson from "../../mocks/passes-validation.json";
 
 describe("POST /rule-validate", () => {
   it("it should return 404 if non-existent route is supplied", async (done) => {

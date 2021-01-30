@@ -16,21 +16,17 @@ exports.buildData = (payload) => {
         : payload["data"]; // missions.count ? data[missions} : data;
     const condition = payload["rule"]["condition"];
     const conditionValue = payload["rule"]["condition_value"];
-    if (!conditionsMap[condition]) {
-        if (condition === "contains") {
-            if (isPresent(desiredField, desiredData)) {
-                return {
-                    validation: {
-                        error: false,
-                        field: fieldKey,
-                        field_value: desiredData[desiredField],
-                        condition: condition,
-                        condition_value: conditionValue,
-                    },
-                    message: `field ${fieldKey} successfully validated.`,
-                };
-            }
-        }
+    if (condition === "contains" && isPresent(desiredField, desiredData)) {
+        return {
+            validation: {
+                error: false,
+                field: fieldKey,
+                field_value: desiredData[desiredField],
+                condition: condition,
+                condition_value: conditionValue,
+            },
+            message: `field ${fieldKey} successfully validated.`,
+        };
     }
     if (conditionsMap[condition] &&
         runCommand(desiredData[desiredField], conditionsMap[condition], conditionValue)) {

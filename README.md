@@ -1,6 +1,6 @@
 # Rule Validation API
 
-- ##### DEMO - https://kingabesh.com
+- ##### DEMO - https://validation-rules-api.herokuapp.com/api/v1
 
 Could you imagine a more interesting way to handle validation ? Well, be my guest.
 

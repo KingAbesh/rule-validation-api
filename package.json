@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rimraf ./build && tsc",
     "build:watch": "tsc -w",
-    "start": "rimraf ./build && tsc && node build/server.js",
+    "start": "node build/server.js",
     "start:dev": "cross-env NODE_ENV=development nodemon build/server.js",
     "start:staging": "cross-env NODE_ENV=staging node build/server.js",
     "test": "jest build/__tests__/**/**/*.js --detectOpenHandles --forceExit",

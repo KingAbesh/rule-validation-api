@@ -44,7 +44,7 @@ Oh, there are rules. Just a few to mention :'(.
       "field": "missions.count",
       "field_value": 45,
       "condition": "gte",
-      "condition_value: 30
+      "condition_value": 30
     }
   }
 ```
